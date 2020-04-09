@@ -1,0 +1,38 @@
+<!-- 发现 -->
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <view class="publish-container" bind:tap="onpublish">
+      <i class="iconfont icon-fabudaochuzhuomiankuaijie"></i>
+    </view>
+    <view class="search-container">
+      <!-- 搜索 调用组件外部传入方式 -->
+      <x-search iconfont="iconfont " icon-suosou="icon-suosou" bind:search="onSearch" />
+    </view>
+  </view>
+  <!-- 博客卡片 -->
+  <view class="blog-list">
+    <block wx:for="{{blogList}}" wx:key="_id">
+      <view class="blog-panel">
+      <x-blog-card blog="{{item}}" bind:tap="goComment" data-blogid="{{item._id}}"/>
+      <!-- 评论 分享 通过传参的方式进行 引入图标-->
+      <x-blog-ctrl 
+      iconfont="iconfont" 
+      icon-pinglun="icon-pinglun"
+      icon-fenxiang="icon-fenxiang"
+      blogId="{{item._id}}"
+      blog="{{item}}"
+      />
+      </view>
+      
+    </block>
+  </view>
+
+
+
+  <!-- 底部弹出层 -->
+  <x-login modalShow="{{modalShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfall="onLonginFall">
+
+
+  </x-login>
+</view>

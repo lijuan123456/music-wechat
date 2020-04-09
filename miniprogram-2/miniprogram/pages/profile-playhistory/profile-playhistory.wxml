@@ -1,0 +1,2 @@
+<!-- 最近播放历史 -->
+<x-musiclist  musiclist="{{musiclist}}"/>

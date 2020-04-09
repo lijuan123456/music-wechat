@@ -1,0 +1,26 @@
+<!-- 歌曲播放页 -->
+<view class="player-container" style="background:url({{picUrl}})no-repeat center/cover "></view>
+<view class="player-mask"></view>
+
+<view class="play-info" >
+  <!-- 唱片封面 hidden频繁触发用这个-->
+  <view class="player-disc {{isplaying?'play':''}}" bind:tap="onChangeLyricShow" hidden="{{isLyricShow}}">
+    <!-- 唱片能点击暂停时停在当前状态 -->
+    <image class="player-img rotation {{isplaying?'':'rotation-paused'}}" src='{{picUrl}}'></image>
+
+  </view>
+  <!-- 歌词 -->
+  <x-lyric class="lyric" isLyricShow="{{!isLyricShow}}" bind:tap="onChangeLyricShow"  lyric="{{lyric}}" />
+  <!-- 进度条 -->
+  <view class="progress-bar" >
+    <!-- 组件向这里激活一个自定义事件 进度条结束后播放下一首-->
+    <x-progress-bar bind:musicEnd="onNext" bind:timeUpdate="timeUpdate" bind:musicPlay="onPlay" bind:musicPause="onPause" isSame="{{isSame}}"/>
+  </view>
+
+  <!-- 播放按钮 -->
+  <view class="control">
+    <text class="iconfont icon-48shangyishou" bind:tap="onPrev"></text>
+    <text class="iconfont icon-play_icon {{isplaying?'icon-zanting1':'icon-play_icon'}}" bind:tap="togglePlaying"></text>
+    <text class="iconfont icon-49xiayishou" bind:tap="onNext"></text>
+  </view>
+</view>

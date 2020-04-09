@@ -1,0 +1,8 @@
+<!-- 底部弹出层 -->
+<view class="modal " hidden="{{!modalShow}}">
+<view class="panel">
+<i class="iconfont icon-iconset0127" bind:tap="onClose"/>
+  <slot name="modal-content"></slot>
+  
+</view>
+</view>

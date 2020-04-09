@@ -1,0 +1,52 @@
+/* pages/blog-comment/blog-comment.wxss */
+page{
+  background:#F1F1F1; 
+}
+.tab{
+  margin: 30rpx 0;
+  padding: 20rpx 20rpx;
+  background: white;
+}
+.tab-item{
+font-size: 44rpx;
+color: gray;
+}
+.comment{
+  display: flex;
+  flex-direction: column;
+  background: white;
+  margin: 20rpx 0;
+   padding: 0 20rpx;
+
+}
+.blog-ctrl{
+  width: 100%;
+ position: fixed;
+ bottom: 0;
+
+}
+
+
+.comment-title{
+ 
+display: flex;
+padding: 14rpx 0
+
+}
+.comment-portrait{
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.comment-nickname{
+  font-size: 40rpx
+}
+.comment-content{
+  font-size: 32rpx;
+  margin: 0 0 20rpx 0;
+}
+.comment-time{
+  font-size: 30rpx;
+  color: #7F7F7F;
+}

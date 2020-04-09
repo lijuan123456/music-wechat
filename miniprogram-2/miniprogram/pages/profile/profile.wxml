@@ -1,0 +1,34 @@
+<!-- 我的 -->
+
+
+<view class="profile-header">
+  <view class="avatar-url">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName" class="userNickName"></open-data>
+</view>
+<view class="nav">
+  <view class="nav-item">
+    <navigator class="content" url="/pages/profile-playhistory/profile-playhistory" hover-class="none">
+      <i class="iconfont icon-ziyuanldpi icon"></i>
+      <text>最近播放</text>
+      <i class="iconfont icon-youjiantou icon1"></i>
+    </navigator>
+  </view>
+  <view class="nav-item">
+    <navigator class="content" url="/pages/profile-bloghistory/profile-bloghistory" hover-class="none">
+      <i class="iconfont icon-shoucang icon"></i>
+      <text>我的发现</text>
+      <i class="iconfont icon-youjiantou icon1"></i>
+    </navigator>
+  </view>
+  <view class="nav-item" >
+    <!-- <navigator class="content" hover-class="none" > -->
+    <view class="content" bind:tap="onTapOrCode">
+      <i class="iconfont icon-weibiaoti-- icon"></i>
+      <text>小程序码</text>
+      <i class="iconfont icon-youjiantou icon1"></i>
+      </view>
+    <!-- </navigator> -->
+  </view>
+</view>

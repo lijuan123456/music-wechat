@@ -1,0 +1,60 @@
+.ctrl{
+  display: flex;
+  align-items: center;
+  background: #fff;
+  height: 100%;
+}
+.ctrl-item{
+  flex: 1;
+  text-align: center;
+  color: rgba(40, 47, 60, 0.8);
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+.ctrl-item .icon{
+  margin-right: 12rpx;
+  font-size: 32rpx;
+
+}
+.ctrl-item text{
+  font-size: 32rpx;
+}
+.comment-content{
+  margin: 80rpx 0rpx 30rpx 20rpx ;
+  /* background: red; */
+  width: 650rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.send{
+  background: #D43C33;
+  color: #fff;
+  font-size: 32rpx;
+  align-content: center;
+  line-height: 60rpx;
+  width: 100rpx;
+  
+
+}
+.share-btn{
+background: #fff;
+color: rgba(40, 47, 60, 0.8);
+padding: 0;
+height: 100%;
+border: none;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+font-weight: 400;
+}
+.share-btn:hover{
+
+  display: none;
+}
+.share-hover::after{
+  border: 0;
+}
